@@ -1,54 +1,33 @@
-# React + TypeScript + Vite
+# 🧪 React & TypeScript: Learning Laboratory
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositorio no es un proyecto final, sino un **laboratorio de experimentación y aprendizaje**. Contiene una serie de archivos independientes, cada uno diseñado para aislar y profundizar en un concepto específico de React y su integración con TypeScript.
 
-Currently, two official plugins are available:
+El objetivo de este espacio es servir como **bitácora técnica** y referencia rápida sobre cómo resolver problemas comunes y aplicar Hooks de manera efectiva, haciendo la transición desde lenguajes fuertemente tipados como **C#**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📂 Temas Repasados y Estructura
 
-## Expanding the ESLint configuration
+Los ejercicios están organizados por unidades de conocimiento para facilitar su consulta:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Fundamentos de Estado (`useState`)**: Implementación de lógica local, formularios controlados y manejo de tipos primitivos y complejos.
+* **Gestión de Estado Global (`useContext`)**: 
+    * Creación de **Providers** y **Contexts**.
+    * Definición de contratos mediante `interfaces` para asegurar el flujo de datos.
+    * Evitar el *Prop Drilling* en aplicaciones escalables.
+* **Optimización de Rendimiento (`useMemo` & `useCallback`)**:
+    * Uso de **`useMemo`** para memorizar resultados de cálculos pesados (ej. sumatorias e impuestos) y evitar re-ejecuciones innecesarias.
+    * Diferenciación entre memorización de valores y estabilidad de referencias de funciones.
+* **Sincronización y Efectos (`useEffect`)**: 
+    * Manejo del ciclo de vida de los componentes.
+    * Preparación de lógica para consumo de **Web APIs** externas.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 🛠️ Stack Tecnológico
+* **Librería**: React 18+
+* **Lenguaje**: TypeScript (Tipado estático y Contratos)
+* **Entorno**: Vite
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📖 Cómo leer este repositorio
+Cada archivo o carpeta es una pieza de estudio independiente. Está diseñado para que cualquier desarrollador pueda abrir un archivo específico y entender la implementación de un Hook sin necesidad de navegar por toda la arquitectura del proyecto. Es una lista de reproducción de conceptos prácticos.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
